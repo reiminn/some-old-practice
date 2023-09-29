@@ -1,0 +1,35 @@
+#array review
+
+#Creating an array
+#import array as ar (x=ar.array('i', [1,2,3,4]) OR
+from array import *
+x= array('i', [7,8,25,12])
+print(x, '\n')
+
+#Acessing elements
+print("first:", x[0])
+print("third:", x[2])
+print("third last:", x[-3])
+print("last:", x[-1])
+
+#Search an array (does not work if given value is not present in the array, if 2 values present, only shows the first one)
+print("position of 12:", x.index(12)) #remember indexes start from 0
+
+#Print all values of array
+for y in x:
+  print(y)
+  '''
+  could also
+  import array as arr  
+'''
+values = array('i',[10,20,30])
+
+#prints each individual value in the array
+for value in range(len(values)):
+    print(values[value])
+
+#output
+
+#10
+#20
+#30
