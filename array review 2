@@ -1,0 +1,29 @@
+#array review
+
+#Creating an array
+#import array as ar (x=ar.array('i', [1,2,3,4]) OR
+from array import *
+x= array('i', [7,8,25,12])
+print(x, '\n')
+
+#Adding values
+x.append(2)
+print(x)
+
+x.extend([1,2,3])
+print(x)
+#can also insert(index,value)
+x.insert(0,5)
+print(x)
+#to remove a value
+x.remove(5)
+print(x)
+x.remove(2) #incase of 2 vals of the same value, removes the first one
+print(x)
+#can also pop
+x.pop(-1)
+print(x)
+
+#slicing
+print(x[:3])
+print(x[:2:3])
