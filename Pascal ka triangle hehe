@@ -1,0 +1,29 @@
+a=int(input("Enter number"))
+list1=[0,1,0]
+list2=[0]
+list3=[]
+i=0
+'''
+for x in range(len(list1)-1):
+  y=list1[x]+list1[x+1]
+  print(y)
+  list3.append(y)
+list3.append(0)
+list3.insert(0,0)
+print(list3)
+i+=1
+'''
+print(list1)
+def pascal():
+  for x in range(len(list1)-1):
+    y=list1[x]+list1[x+1]
+    list3.append(y)
+  list3.append(0)
+  list3.insert(0,0)
+  print(list3)
+
+while i!=a:
+  pascal()
+  list1=list3
+  list3=[]
+  i=i+1
