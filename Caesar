@@ -1,0 +1,12 @@
+ #CAESAR CIPHER 
+al=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","a","b","c"]
+o=""
+n=str(input("Enter message to be coded"))
+n=n.lower()
+for i in n:
+  if (i not in al):
+    o+=i
+  else:
+    o+=al[(al.index(i)+3)]
+print("Your coded message is:")
+print(o)
