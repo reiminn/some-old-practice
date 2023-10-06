@@ -1,0 +1,37 @@
+"""
+from string import ascii_letters
+print(ascii_letters)
+
+x=int(input("Enter Key"))
+y=str(input("MEssage to be coded:"))
+"""
+#Just ignore the above, it's just sth I'd like to remember for future codes
+#if i want this code to look better, I can just define a function as main that'd do everything I want in the main code and after that, define the other function. just for cleanliness that is
+
+def code(key, l):
+  alph="abcdefghijklmnopqrstuvwxyz"
+  alph2=alph[key:]+alph[0:key]
+  output=""
+  for i in l:
+    if i==" ": output+=i
+    else:
+        output+=(alph2[(alph.index(i))])
+  print(output)
+
+def decode(key, l):
+  alph="abcdefghijklmnopqrstuvwxyz"
+  alph2=alph[key:]+alph[0:key]
+  #print(alph2)
+  output=""
+  for i in l:
+    if i==" ": output+=i
+    else:
+      output+=alph[alph2.index(i)]
+  print(output)
+  
+#code(key=int(input("Enter key:")), l=str(input("Enter string")))
+#decode(key=int(input("Enter key:")), l=str(input("Enter string")))
+
+for x in range(2,27):
+  #code(x, "or fher gb qevax lbhe binygvar")
+  decode(x, "or fher gb qevax lbhe binygvar")
