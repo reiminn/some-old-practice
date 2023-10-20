@@ -1,0 +1,81 @@
+print(*objects, sep=' ', end='\n', file=sys.stdout, flush=False)
+round(number[, ndigits])
+("hello, \"friend\"") backslashes tell the compiler that the Quotating marks are part of the string
+f"hello, {name}")
+
+# Ask the user for their name, remove whitespace from the str and capitalize the first letter of each word
+name = input("What's your name? ").strip().title()
+(also lstrip and rstrip)
+
+
+print(f"{z:,}")
+Though quite cryptic, that print(f"{z:,}") creates a scenario where the outputted z will include commas where the result could look like 1,000 or 2,500.
+# Print the result
+print(f"{z:.2f}")
+
+This cryptic fstring code displays the same as our prior rounding strategy.
+
+
+def main():
+
+    # Output using our own function
+    name = input("What's your name? ")
+    hello(name)
+
+    # Output without passing the expected arguments
+    hello()
+
+
+For more pleasant output, you may wish to use string formatting to produce a limited number of significant digits:
+>>>
+
+format(math.pi, '.12g')  # give 12 significant digits
+'3.14159265359'
+
+format(math.pi, '.2f')   # give 2 digits after the point
+'3.14'
+
+repr(math.pi)
+
+
+# Create our own function
+def hello(to="world"):
+    print("hello,", to)
+
+
+main()
+
+reversed(seq)
+
+    Return a reverse iterator. seq must be an object which has a __reversed__() method or supports the sequence protocol (the __len__() method and the __getitem__() method with integer arguments starting at 0).
+ class slice(stop)
+class slice(start, stop, step=None)
+
+    Return a slice object representing the set of indices specified by range(start, stop, step). The start and step arguments default to None. Slice objects have read-only data attributes start, stop, and step which merely return the argument values (or their default). They have no other explicit functionality; however, 
+they are used by NumPy and other third-party packages. Slice objects are also generated when extended indexing syntax is used. For example: a[start:stop:step] or a[start:stop, i]. See itertools.islice() for an alternate version that returns an iterator.
+
+
+
+One illusion may beget another. For example, since 0.1 is not exactly 1/10, summing three values of 0.1 may not yield exactly 0.3, either:
+>>>
+
+0.1 + 0.1 + 0.1 == 0.3
+False
+
+Also, since the 0.1 cannot get any closer to the exact value of 1/10 and 0.3 cannot get any closer to the exact value of 3/10, then pre-rounding with round() function cannot help:
+>>>
+
+round(0.1, 1) + round(0.1, 1) + round(0.1, 1) == round(0.3, 1)
+False
+
+Though the numbers cannot be made closer to their intended exact values, the math.isclose() function can be useful for comparing inexact values:
+>>>
+
+math.isclose(0.1 + 0.1 + 0.1, 0.3)
+True
+
+Alternatively, the round() function can be used to compare rough approximations:
+>>>
+
+round(math.pi, ndigits=2) == round(22 / 7, ndigits=2)
+True
