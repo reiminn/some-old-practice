@@ -1,0 +1,18 @@
+#MAD LIBS WOO
+kingdom_adj=input("Enter an adjective:")
+name=input("Enter a name:")
+ed_verb=input("Enter a veb that ends with \"ed\":")
+adj=input("Enter an adjective:")
+creature=input("Enter the name of a creature:")
+vil_name=input("Enter a name:")
+adj_2=input("Enter an adjective:")
+verb=input("Enter a verb:")
+
+madlibs=f"Let's start:\
+Once upon a time in a/an {kingdom_adj} kingdom, there lived a princess called {name}.\
+She was {ed_verb} by all and everyone thought she was really {adj}. Then one day,\
+an evil {creature} named {vil_name} entered the Kingdom. She saw Princess {name}\
+and thought she was really {adj_2}. She didn't like this and decided she will {verb} \
+the princess."
+  
+print(madlibs)
