@@ -1,0 +1,22 @@
+array=[45,56,67,89,90,112,133]
+
+def bsearch(high, low, target):
+  if low>high:
+    return "Result not found"
+  
+  mid=(high+low)//2
+  
+  if array[mid]==target:
+    return (mid)
+    
+  elif array[mid-1]<target:
+    return bsearch(low=mid+1, high=high, target=target)
+    
+  else:
+    return bsearch(high=mid-1, low=low, target=target)
+  
+     
+
+print(bsearch((len(array)-1), 0, 112))
+x=array[bsearch((len(array)-1), 0, 112)]
+print(x)
