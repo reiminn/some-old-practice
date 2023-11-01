@@ -1,0 +1,27 @@
+def main():
+  array=[2, 9, 8, 7, 5, 9, -2]
+  x=sort(array)
+  print(x)
+
+def sort(ar):
+  for i in range(0,(len(ar)-1)):
+    h,r=findminval(i,ar) #i here is the start value aka from where we'll start finding the min value for list
+    #h= the min value, it isn't really necessary here tho
+    ar[i], ar[r] = ar[r], ar[i] #swapping
+  return ar
+
+
+def findminval(start,l):
+  lisst=l[start:] #slicing the list from start value
+  k=lisst[0]# setting k as the first val from the modified list 
+  #we'll use k to compare all other vals with it
+  min_index=0
+  for j,a in enumerate(lisst):
+    if k>a:
+      k=a
+      min_index=j
+  return k, min_index+start
+  
+
+
+main()
