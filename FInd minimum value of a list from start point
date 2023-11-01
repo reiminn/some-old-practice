@@ -1,0 +1,14 @@
+def findminval(p,l):
+  lisst=l[p:]
+  k=lisst[0]
+  for a in lisst:
+    if k>a:
+      k=a
+      
+  return k
+  
+array=[34,56,76,-1,5]
+print(findminval(0,array))
+
+
+#could use binary search maybe? but would have to sort list for it first. and the above program is being used in a program to sort stuff so... recursionnnnnn (the bad one agh)
