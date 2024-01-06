@@ -1,0 +1,45 @@
+#Bulls and cows
+"""
+Bulls = green in wordle
+Cows= yellow in wordle.
+features i wanna add later-
+highscore
+input to be only 4 digit no. without any repetition else raise error and ask again
+https://www.geeksforgeeks.org/python-cows-and-bulls-game/
+"""
+print("Hello and welcome to Bulls and cows!")
+print("Do you know how to play?")
+ans=str(input("Enter (y) for Yes and (n) for No."))
+if ans=="No":
+  print("Well that's all right! I can teach you now! Let's begin:")
+  print("In this game, you will have to guess a predecided code.")
+  print("Important things to note about the code:")
+  print(" 1. The predecided code has 4 digits.")
+  print(" 2. None of the four digits are repeated.")
+
+  
+code="1234"
+
+
+def main():
+  bull=0
+  cow=0
+  while (bull!=4):
+    u_ans=str(input("Enter code:"))
+    bull, cow = compare(u_ans)
+    print(f"Bulls:{bull}")
+    print(f"Cows:{cow}")
+  print("you win")
+  
+def compare(n):
+  b=0
+  c=0
+  for i in n:
+    if i in code:
+      if code.index(i)==n.index(i):
+        b+=1
+      else: 
+        c+=1
+  return b, c  
+
+main()
