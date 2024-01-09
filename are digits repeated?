@@ -1,0 +1,16 @@
+
+def main():
+  a=str(input("Enter number:"))
+  print(repeat(a))
+#Funtion to check if the given input has any repeated digits
+#set doesn't include repeated entities 
+#so it's len will be different than the og str if the str contains repeated entities
+def repeat(str):
+  if len(str)==len(set(str)): 
+    return False
+  else:
+    return True
+
+while True:
+  main()
+  
