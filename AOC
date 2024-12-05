@@ -1,0 +1,26 @@
+#puzzle 1
+import data24
+left=data24.llist
+right=data24.rlist
+"""left=sorted(left)
+right=sorted(right)
+x=list((zip(left,right))) #splits the 2 lists into pairs(tuples)
+dist=0
+for a in x:
+    l,r=list(a) #convert the pair into a list and then get the values from it, now that i think about it, its prolly not necessary hehe
+    l,r=int(l), int(r) #the values we get are in str form so yeah, convert them again
+    dist+=abs(l-r) #absolute function since difference
+print(dist)"""
+
+#puzzle 2
+#for every value(i) in left list, i need to see how many times it appears in rlist
+#then that value(i) is multipied by the no. of time it appears in the rlist = i*n
+#summation i*n
+similarity=0
+for l in left:
+    freq=0
+    for r in right:
+        if l ==r:
+            freq+=1
+    similarity+=freq*int(l)
+print(similarity)
